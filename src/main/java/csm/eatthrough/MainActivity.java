@@ -3,15 +3,14 @@ package csm.eatthrough;
 import android.app.FragmentManager;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-
-import androidx.appcompat.app.AppCompatActivity;
-
 
 public class MainActivity extends AppCompatActivity
         implements OnMapReadyCallback {
@@ -22,7 +21,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         FragmentManager fragmentManager = getFragmentManager();
-        MapFragment mapFragment = (MapFragment) fragmentManager
+        MapFragment mapFragment = (MapFragment)fragmentManager
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
     }
